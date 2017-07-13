@@ -1,5 +1,7 @@
 package servlets;
 
+import controller.Calc;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,8 +22,14 @@ public class MainServlet extends HttpServlet {
         response.setContentType("text/html; charset=utf-8");
         HttpSession session = request.getSession();
 
-        PrintWriter out = response.getWriter();
+        Calc calc = new Calc();
+        int a = Integer.parseInt(request.getParameter("one"));
+        int b = Integer.parseInt(request.getParameter("two"));
+        double c = calc.multiply.calculate(a, b);
 
+        PrintWriter out = response.getWriter();
         out.println("<h2 style='color:blue'>ID сессии = " + session.getId() + "</h2>");
+        out.println("<h3 style='color:green'>" + a + "+" + b + "=" + c +"</h2>");
+        //out.println("<img src='kysk.jpg'/>");
     }
 }
