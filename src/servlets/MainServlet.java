@@ -30,6 +30,6 @@ public class MainServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<h2 style='color:blue'>ID сессии = " + session.getId() + "</h2>");
         out.println("<h3 style='color:green'>" + a + "+" + b + "=" + c +"</h2>");
-        //out.println("<img src='kysk.jpg'/>");
+
     }
 }
