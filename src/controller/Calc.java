@@ -12,7 +12,7 @@ public class Calc  {
     public ICalc multiply = (n, m) -> n * m;
     public ICalc divide = (n, m) -> n / m;
 
-    MainServlet mainServlet = new MainServlet();
+    //MainServlet mainServlet = new MainServlet();
     /*int a = Integer.parseInt(mainServlet.request.getParameter("one"));
     int b = Integer.parseInt(request.getParameter("two"));*/
 
